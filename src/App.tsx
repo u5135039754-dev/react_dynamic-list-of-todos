@@ -10,11 +10,7 @@ import { Loader } from './components/Loader';
 import { Todo } from './types/Todo';
 import { getTodos } from './api';
 
-interface Props {
-  todo: Todo[];
-}
-
-export const App: React.FC<Props> = () => {
+export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('all');
@@ -71,16 +67,10 @@ export const App: React.FC<Props> = () => {
               {selectedTodo && (
                 <TodoModal todo={selectedTodo} onClose={handleClose} />
               )}
-
-              {selectedTodo && (
-                <TodoModal todo={selectedTodo} onClose={handleClose} />
-              )}
             </div>
           </div>
         </div>
       </div>
-
-      {selectedTodo && <TodoModal todo={selectedTodo} onClose={handleClose} />}
     </>
   );
 };
