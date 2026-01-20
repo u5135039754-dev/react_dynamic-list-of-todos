@@ -52,7 +52,7 @@ export const TodoModal: React.FC<TodoModalProps> = ({ todo, onClose }) => {
 
           <div className="modal-card-body">
             <p className="block" data-cy="modal-title">
-              quis ut nam facilis et officia qui
+              {todo.title}
             </p>
 
             <p className="block" data-cy="modal-user">
